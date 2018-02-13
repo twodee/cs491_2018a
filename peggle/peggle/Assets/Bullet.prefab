@@ -9,46 +9,47 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1945690386871750}
+  m_RootGameObject: {fileID: 1581420750510760}
   m_IsPrefabParent: 1
---- !u!1 &1945690386871750
+--- !u!1 &1581420750510760
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4850566517810750}
-  - component: {fileID: 33988497737385796}
-  - component: {fileID: 23390062046421000}
-  - component: {fileID: 58536901619204172}
-  - component: {fileID: 50760579496835054}
+  - component: {fileID: 4590261010256496}
+  - component: {fileID: 33924294370198324}
+  - component: {fileID: 23705163201083858}
+  - component: {fileID: 50407177427224296}
+  - component: {fileID: 58678587011426662}
+  - component: {fileID: 114705298298887478}
   m_Layer: 0
-  m_Name: Peggy
+  m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4850566517810750
+--- !u!4 &4590261010256496
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1945690386871750}
+  m_GameObject: {fileID: 1581420750510760}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -1.95, y: 0, z: 0}
+  m_LocalScale: {x: 0.58307767, y: 0.58307767, z: 0.58307767}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23390062046421000
+--- !u!23 &23705163201083858
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1945690386871750}
+  m_GameObject: {fileID: 1581420750510760}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -57,7 +58,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7042561aa78a7446abef030ffe79e8c7, type: 2}
+  - {fileID: 2100000, guid: 0f6e1dd4def6a41438a76353a81b4545, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -77,39 +78,39 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33988497737385796
+--- !u!33 &33924294370198324
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1945690386871750}
+  m_GameObject: {fileID: 1581420750510760}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!50 &50760579496835054
+--- !u!50 &50407177427224296
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1945690386871750}
-  m_BodyType: 1
+  m_GameObject: {fileID: 1581420750510760}
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 6200000, guid: 7c0c70306d2df4c11bb065dfc7c50a78, type: 2}
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &58536901619204172
+--- !u!58 &58678587011426662
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1945690386871750}
+  m_GameObject: {fileID: 1581420750510760}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -119,3 +120,14 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &114705298298887478
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1581420750510760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c1a7d3e460c04d7cb9125703f93a92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -4,6 +4,9 @@ using System.IO.Ports;
 using UnityEngine;
 
 public class CannonController : MonoBehaviour {
+  public GameObject bulletPrefab;
+  public float bulletSpeed;
+
   private SerialPort serial;
 
 	void Start() {
@@ -12,11 +15,19 @@ public class CannonController : MonoBehaviour {
 	}
 	
 	void Update() {
-	  while (serial.BytesToRead > 0) {
-      int angle = serial.ReadByte();
-      float mapped = angle * 140.0f / 255 - 70;
-      /* Debug.Log(angle); */
-      transform.eulerAngles = new Vector3(0, 0, mapped);
+	  while (serial.BytesToRead >= 2) {
+      int device = serial.ReadByte();
+      int val = serial.ReadByte();
+
+      if (device == 0) {
+        float mapped = val * 140.0f / 255 - 70;
+        transform.eulerAngles = new Vector3(0, 0, mapped);
+      } else {
+        // fire
+        GameObject bulletInstance = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        Vector2 direction = -transform.up;
+        bulletInstance.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
+      }
     }  
 	}
 }
